@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: rgb(124, 123, 123);
+            padding: 3px;
+            box-shadow: 1px 1px 1px black;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 4px 4px 9px 0px black;
+        }
+
+        #assuntos {
+            background-color: rgb(165, 165, 165);
+            padding: 5px;
+            margin: 5px 0px;
+            text-align: center;
+        }
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+
+        article > aside {
+            text-align: right;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grouping Tags</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+           <h2>Esportes - Política - Tecnologia</h2>
+        </section>
+        <section id="noticias">
+            <article>
+                <h3>Notícia sobre o Brasil</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa totam aliquid id enim quaerat deleniti in iure? Tempore eligendi distinctio dolorem error, nostrum laudantium explicabo maxime laborum possimus, reprehenderit rerum vero, accusamus ullam autem dolores odio perferendis. Aut reprehenderit fugit, itaque iusto quasi animi laudantium sit distinctio dolore libero nobis autem. Cumque voluptas cupiditate provident, quibusdam iste eligendi impedit repudiandae harum accusantium! Cupiditate quas a iste odio voluptate itaque. Consequuntur qui possimus error molestiae, natus minima nostrum corporis ipsum porro provident temporibus numquam adipisci, totam suscipit dolore ipsa perferendis? Hic ipsa rerum nostrum nam vero voluptatibus expedita delectus mollitia exercitationem.</p>
+                <aside>
+                    <p>Artigo escrito por Fulano de Tal</p>
+                </aside>
+        </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido para o Curso de HTML5 e CSS3 do canal Curso em Vídeo.</p>
+    </footer>
+</body>
+</html>

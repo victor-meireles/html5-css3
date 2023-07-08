@@ -1,0 +1,530 @@
+Materiais do curso em:
+github.com/gustavoguanabara
+gustavoguanabara.github.io
+
+Conteúdo:
+m1 - conceitos basicos preparação do ambiente, semantica do html5, textos, titulos, ligaçoes, multimidia, estilos
+m2 - fundamentos do design, psicologia das cores, tipografia, elementos do css, modelo de caixas, wireframe, responsividade
+m3 - versionamento de software, hospedagem de sites estáticos, tabelas
+m4 - quadros em linha, formulários, media queries, mobile first
+m5 - flexbox, grid layout, projeto final
+
+Anotações:
+— Internet: É a rede das redes, com vários servidores especializados em determinados tipos de serviço dentro dessa rede e World Wide Web é uma subrede da internet e criou-se a sigla "www" como a parte da internet especializada em servidores http.
+O termo surgiu de INTERCONNECT NETWORKING, que abreviado ficou como INTERNETWORKING até chegar ao que conhecemos hoje, INTERNET. Foi criada durante a Guerra Fria para proteger centros militares.
+
+— www (World Wide Web): Sub-rede da internet (navegador).
+
+— HTTP: Servidor compatível com o navegador www (baseado no HTML), especializado em produzir textos e criado por Tim Berners-Lee.
+
+— HTML: Linguagem de marcação do HTTP.
+
+— UTF-8 = Tipo de codificação binária que pode representar qualquer caractere universal.
+
+— bits: Zeros ou um.
+
+— byte: Sequência de 8 bits, e é a sequência mínima para compor um dado.
+
+— Identificação de dados: Ocorre através de código binário, no caso, os bytes (0 e 1).
+
+— Representação de dados:
+8 bits = 1 byte
+1024 bytes = 1 KB
+1024 KB = 1 MB
+1024 MB = 1 TB
+1024 TB = 1 PB
+1024 PB = 1 EB
+1024 EB = 1 ZB
+1024 ZB = 1 YB
+
+— DNS: Sistema de cruzamento, que cruza o domínio com o IP correspondente, direcionando o usuário para o mesmo.
+
+— Domínio: Máscara do IP, nome único, pago anualmente, vários TLD (Top-Level Domains).
+
+— hospedagem - Espaço para armazenagem de arquivos, pago mensalmente, espaço memória, recursos.
+
+— IP: Endereço de servidor (dado em forma quantitativa).
+
+— Roteador/Modem: Responsável por modelar os sinais para uma linguagem compreensível para o eletrônico receptor/ou emissor.
+
+— O modem e o DNS são basicamente os intermediários entre aquilo que você visualiza na Web.
+
+— KB⁴=1TB.
+
+— 0 > Sinal sem frequência | 1 > com frequência — A frequência é utilizada pelo seu Modem para diferenciar os elementos e identificar cada componente da informação (como, por exemplo, origem e destino).
+
+— As informações são fragmentadas e percorrem caminhos/rotas diferentes para chegar ao destino, e o Modem do destinatário é responsável por interpretar e rearranjar os fragmentos.
+
+— MB é diferente de Mb - MB Megabytes (armazenamento) e Mb Megabits (transmissão).
+
+— TLD (Top-Level Domain): .com; .gov; .uk
+
+— gTLD (Generic Top-Level Domains): São TLDs genéricos, sem indicação de país. Alguns dos domínios genéricos são .com, .net, .gov, .org, .io, .info, .online, .store, etc. 
+
+— ccTLD (Country Code Top-Level Domain): São TLDs com designação do país (coutry code). Alguns dos domínios desse 
+tipo são .com.br, .edu.us, .co.fr, .jp, .es, etc.
+
+— Identificando uma URL: www.github.com/gustavoguanabara
+www: Sub-domínio
+github.com: Domínio
+.com: TLD
+/gustavoguanabara: Caminho
+
+— HTLM = HyperText Markup Language (Linguagem de marcação para hipertexto).
+É focada em conteúdo (texto, imagens, vídeos, tabelas, listas).
+
+— CSS = Cascading Style Sheets (Folhas de estilo em cascata).
+É focada em design (cores, sombras, tamanhos, posicionamento).
+
+— Conteúdo em HTML:
+<h1></h1>: Abertura/fechamento de tag
+<p></p>: Abertura/fechamento de parágrafo
+<img src="foto.png" alt="exemplo de foto">: Abertura de tag imagem
+<br></br>: Quebra de linha
+
+src e alt = Parâmetros
+foto.png e "exemplo de foto" = Valores
+
+— Estilo em CSS:
+h1 {
+	font-family: Arial;
+	font-size: 20pt
+	color: blue;
+   }
+
+h1 = seletor
+font-family: Arial; = declaração
+
+Toda declaração tem ";" no final.
+CSS tem seletores, seletores tem declarações e cada declaração é constituída de um par de propriedade e valor.
+
+— Estrutura básica de documento HTML:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	content="width=device-width,
+	inicial-scale=1.0">
+	<title>Document</title>
+<head>
+<body>
+	<h1>Olá, Mundo!</h1>
+</body>
+</html>
+
+— Front-end: Focado na experiência do usuário (HTML5, CSS3, JavaScript).
+
+— Back-end: Focado na interação do código desenvolvido com o servidor (PHP, JavaScript, C#, Python, Ruby, Java)
+
+— Adicionar símbolos: &código
+https://www.w3schools.com/charsets/ref_utf_symbols.asp
+
+— Adicionar emojis: &#xcódigo
+https://emojipedia.org/
+ 
+— Imagens de domínio público: UnSplash, Pexels, FreePik, Rawpixel, Pixabay, Libreshot, Wikimedia Commons.
+
+— JPEG (Joint Photographics Experts Group): Alta compactação (ocupa pouco espaço em disco).
+Usar sempre JPEG com compactação entre 30% e 50%.
+
+— PNG (Portable Network Graphics): Tem a capacidade de configurar a opacidade de cada pixel (deixá-lo transparente ou com transparência limitada).
+Usar PNG somente quando for necessário a transparência na foto.
+
+— GIMP: Editor de código aberto que otimiza imagens .jpg para utilização em sites.
+
+— Favicon: Ícone (favicon.ico) que aparecem na aba ao lado do nome dos sites.
+iconarchive.com: Download de ícones prontos.
+favicon.cc: Desenhar sua própria favicon.
+favicon.io: Criar favicon a partir de imagens já obtidas.
+
+— Títulos: Em HTML são conhecidos como headings e tem seis níveis de hierarquia:
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>
+
+h1: É o assunto principal
+h2: Sub-assunto do h1
+h3: Sub-assunto do h2
+h4: Sub-assunto do h3
+h5: Sub-assunto do h4
+h6: Sub-assunto do h5 
+ 
+— HTML5: Focado na SEMÂNTICA (no significado de cada elemento) e não na FORMA (colorir, centralizar etc.).
+Segundo o dicionário Michaelis (versão online e gratuita), "Semântica é o significado dos vocábulos, por oposição à sua forma."
+
+— Principais formatações semânticas:
+Destaque: <strong></strong>
+Ênfase: <em></em>
+Marcação: <mark></mark>
+Texto pequeno: <small></small>
+Texto excluído: <del></del>
+Texto inserido: <ins></ins>
+Texto sobrescrito: <sup></sup>
+Texto subesctrito: <sub></sub>
+ 
+— Outras formatações:
+Ler códigos: <code></code>
+Pré-formatação: <pre></pre>
+Citação: <q></q>
+Citação de bloco (completa): <blockquote></blockquote>
+Referenciar com um link a citação: <blockquote cite="link"></blockquote>
+Abreviação: <abbr tittle="significado da abreviação"></abbr>
+
+— Listas ordenadas: Toda lista onde a ordem dos itens é algo importante.
+Para criar uma lista ordenada usa-se a tag <ol></ol> para delimitar a lista e <li> para identificar cada item da lista.
+A tag <ol> possui um parâmetro type para configurar o tipo de marcado da lista:
+1 - Listas numeradas.
+A - Listas alfabéticas em maiúsculas.
+a - Listas alfabéticas em minúsculas.
+I - Listas com algarismos romanos em maiúsculas.
+i - Listas com algarismos romanos em minúsculas.
+
+Também podendo indicar o início da contagem com o parâmetro start:
+<ol type="I" start = "5"></ol>
+
+— Listas não ordenadas: Ao contrário das ordenadas a ordem dos itens não influenciará no significado.
+Para criar uma lista não ordenada usa-se a tag <ul> para delimitar a lista e a tag <li> para criar cada item.
+A tag <ul> tem a opção de configurar a propriedade type com os valores:
+disc - Padrão, bola preta totalmente pintada.
+circle - Uma bola com uma borda preta e sem preenchimento.
+square - Um pequeno quadrado preto totalmente pintado.
+
+— Listas mistas: São listas dentro de outras listas. 
+ 
+— Lista de definições: É como se fosse um dicionário, temos os termos e as suas descrições.
+Toda lista de definições está dentro de uma tag <dl></dl>. E cada termo é um <dt> (termo de definição) e cada descrição é um <dd> (descrição da definição).
+Tag das definições <dt> e descrições <dt> tem fechamento opcional.
+ 
+— Links: Para criar links usamos a tag <a> (âncora) e podemos usar os seguintes atributos:
+href: Indica o destino do link (URL).
+target: Indica o alvo (qual janela será aberta): _blank abrirá o link em uma nova janela em branco e _self abrirá o link na janela ou frame atual (padrão).
+rel: Indica qual é a natureza do destino:
+next - Indica que o link é para a próxima parte do documento atual.
+prev - Indica que o link é para a parte anterior do documento atual.
+author - Indica que é um link para o site do autor do artigo atual.
+external - Indica que é um link para outro site que não faz parte do site atual.
+nofollow - Indica ao Google que ele não deve segui-lo, ou seja, que o site que fez a referência não endossa o link. Com isso, o site referenciado deixa de ganhar toda a autoridade que poderia.
+download: Atributo para direcionar o valor configurado do arquivo que será feito o download.
+type - Atributo para indicar ao navegador que tipo de arquivo está sendo baixado.
+https://www.iana.org/assignments/media-types/media-type
+
+— Imagens flexíveis: Adaptar o conteúdo (imagens) ao tamanho da tela, tag <source media>.
+picture - Concentra as outras fontes de imagem.
+source - Possui 3 atributos:
+type: Indica o media type.
+srcset: Configura o nome da imagem a ser carregada quando o tamanho indicado for atingido.
+media: Indica o tamanho máximo a ser considerado para carregar a imagem indicado no atributo srcset.
+
+É importante que exista uma ordem entre os <source>, os itens mais acima devem ser os menores tamanhos para max-width e que os seguintes sejam maiores, de forma crescente.
+ 
+— Reproduzir áudio: Usa-se as tags <audio> e <source>.
+A tag <audio> tem alguns atributos principais:
+preload - Atributo que indica se o áudio será pré-carregado ou não, aceitando 3 valores:
+metadata: Carrega apenas as informações sobre o arquivo (tamanho, tempo, informações de direitos, etc).
+none: Não carrega absolutamente nada até que o usuário clique no botão play.
+auto: É o padrão, carrega o arquivo de áudio inteiro assim que a página for carregada.
+controls - Apresenta o player na tela para a interação do usuário.
+autoplay - Inicia a reprodução do áudio assim que a página é carregada.
+loop - Faz com que o áudio seja repetido assim que a reprodução termine.
+ 
+— Reproduzir vídeo: Utiliza-se a tag <video>, caso o arquivo esteja hospedado no nosso próprio servidor.
+A tag <video> recebe alguns atributos importantes:
+width: Indica a largura que o vídeo vai ter na tela. 
+poster: Configura uma imagem que vai aparecer como capa do vídeo.
+controls: Configura se os controler do vídeo vão aparecer na parte inferior do vídeo.
+autoplay: Diz ao navegador se o vídeo vai dar play automaticamente, assim que a página for carregada.
+O autoplay só funcionará no Chrome através da utilização da tag muted antes do autoplay.
+
+Os formatos suportados são MPEG, WEBM e OGG, mas os dois primeiros possuem maior compatibilidade com os navegadores atuais.
+Conversor: https://handbrake.fr/downloads.php
+
+— Existem 3 formas de se aplicar estilos em CSS: inline, interno e externo.
+CSS inline - Forma mais básica para aplicar estilos em áreas pontuais, tag por tag. É sugerido não utilizá-la.
+Ex: <h1 style="color: red;">Capítulo 1</h1>
+CSS interna - Forma mais dinâmica e prática. Adicionamos a tag <style> após a tag <title> dentro da área <head> do documento HTML local.
+CSS esterna - Forma mais versátil, organizada e eficiente. Adicionamos a tag <link:css> após da tag <title> dentro da área <head> do documento HTML para referenciar um arquivo externo.
+
+Observação: Configurações pontuais (HTML style) vão prevalecer sobre as configurações gerais (CSS style).
+ 
+— Modelo de Caixas (Box Model): São aplicáveis ao HTML e ao CSS. Se trata de conjuntos que irão facilitar muito na hora de organizarmos o design e as partes do nosso site.
+Quando temos um documento HTML, tudo aquilo que é exibido na tela, é exibido em forma de caixa... De tal modo que a grande maioria das caixas na HTML podem estar uma dentro da outra. Dessa forma, podemos formar hierarquias de caixas.
+Quando colocamos um elemento dentro do outro, o termo que descreve isso é o " ANINHAMENTO ", algo em forma de ninho, coisas que estão uma dentro da outra e assim por diante. Na prática, uma caixa seria todo elemento de um site visível na tela.
+Considerando que todos os elementos de um site estão dentro de uma caixa, quando formatamos um elemento com o CSS através de seletores, na verdade estamos configurando a caixa que vai estar exibindo esse elemento.
+
+— Anatomia das Caixas:
+Parte do Conteúdo: Toda caixa possum um tamanho que é chamado de "Parte de Conteúdo", esse tamanho é especificado em duas medidas:
+height: altura
+width: largura
+
+Border: Podemos traçar uma linha em volta da Parte de Conteúdo (que define o tamanho da caixa) e chamamos essa linha de borda.
+
+Padding: Por padrão, a linha da borda irá ficar muito próxima da Parte do Conteúdo, e se quisermos dar um distanciamento, devemos adicionar um espaço de "padding" (acolchoamento), que seria uma pequena lacuna entre a Parte do Conteúdo e a Borda.
+
+Margin: Ao desenvolver um site, eventualmente iremos ter caixas uma embaixo da outra de forma seguida e, se uma dessas caixas estiver configurada com um espaçamento "padding", pode ser que elas fiquem muito próximas uma da outra e acabem "grudando" na borda do elemento de cima. 
+Pensando nisso, podemos criar, além de um espaço interno (padding), um espaçamento EXTERNO logo após a borda , que seria um " MARGIN ".
+
+Outline: Dentro do margin (espaçamento externo), logo do lado de fora da borda, é criar um tracejado, que não seria uma segunda borda e sim uma área chamada de " OUTLINE " (contorno/traçado). 
+
+RESUMO: Toda caixa, tem a "Parte de Conteúdo", tem uma "Borda", dessa borda para dentro, temos o "Padding", da borda para fora temos o "Margin" e, ainda dentro do margin e fora da borda, temos a área do "Outline".
+
+— Tipos de Caixa: Basicamente, existem dois tipos de caixas, as do tipo " box-level / block-level " e " inline-level ".
+Box level: Em uma caixa do tipo "box-level / block-level", o dito elemento sempre irá se iniciar em uma nova linha e como padrão sempre ocupará a largura total da tela ou do elemento onde ele está contido (100% do viewport), sendo que irá pular para a próxima linha antes de continuar o conteúdo posterior e aí sim inserir outros boxes. As caixas desse tipo são isoladas e independentes.
+Exemplos de tags do tipo "box-level": <div>, <h1>-<h6>, <p>, <main>, <header>, <nav>, <article>, <aside>, <footer>, <form>, <video>
+
+Inline-level: Já uma caixa do tipo "inline-level" não vai começar em uma nova linha, e sim no ponto exato onde foram definidos, no meio de um parágrafo por exemplo. E a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo, sendo que não irá quebrar a linha ao terminar, continuando o conteúdo de forma direta sem pular para a linha de baixo.
+Exemplos de tags do tipo "inline-level": <span>, <a>, <code>, <small>, <strong>, <em>, <sup>-<sub>, <label>, <buttom>, <input>, <select>
+
+— Cores podem ser representadas por:
+nomes: blue
+hexadecimais: #0000ff (hexadecimal: 0 1 2 3 4 5 6 7 8 9 a b c d e f)
+rgb (red, green, blue): rgb(0, 0, 255)
+hsl (hue, saturation, lightness): hsl(240, 100%, 50%)
+rgba e hsla (rgb ou hsl com transparência): rgba(0, 0, 255, 0.76) hsla(240, 100%, 50%, 0.438)
+
+— Harmonia de cores: Círculo cromático
+Cores primárias: amarelo, azul e vermelho
+Cores secundárias: laranja, violeta e verde
+Cores terciárias: cor primária + cor secundária; ex: amarelo-esverdeado
+Temperatura das cores: frias e quentes
+Cores complementares: maior contraste, ao lado imediatamente oposto do círculo contrário
+Cores análogas: cores vizinhas
+Cores intercaladas: escolhe a primeira cor e depois mais duas com intervalo entre elas (pouco usada)
+Monocromia: uso de uma cor modificando apenas saturação e luminosidade, efeito visual conhecido genéricamente como "degradê"
+
+Escolher paleta de cores:
+https://color.adobe.com/pt/create
+https://paletton.com/
+https://coolors.co/
+Extensão Chrome: Colorzilla
+
+— <main>: div especial, indica que é o conteúdo principal
+text-align: alinhamento do texto (center, end, justify, ...).
+border-radius: cantos da caixa arredondados.
+box-shadow / text-shadow: sombra da caixa e sombra do texto, cujo os parâmetros são: tam. sombra p/ lado, tam. sombra p/ baixo, espalhamento, cor;
+Ex: box-shadow: 5px 5px 15px rgba(138, 111, 95, 0.616);
+text-shadow: 1px 1px 2px rgba(129, 78, 5, 0.733);
+
+— Tipografia: É uma arte antiga que estuda técnicas de escrita (do Grego, graphía) para a apresentação de forma impressa (do Grego, týpos). O mundo da tipografia se inicia em 1450, com o inventor alemão Johannes Gutenberg criador da prensa mecânica de tipos móveis. 
+
+— Glifos, letras, caracteres: São os signos alfabéticos projetados para reprodução mecânica. 
+
+— Família tipográfica: É o conjunto de glifos que possuem as mesmas características anatômicas, independente das suas variações:
+Variações - Light, normal, semi-bold, bold, extra-bold (Nem toda família tem todas as variações)
+
+— Categoria de Fontes: 
+Serifadas - Tem a capacidade de guiar nossos olhos graças aos pequenos prolongamentos que elas criam e fazem as letras “se juntarem” em palavras.
+Não-serifadas (Sans-serif) - Sem serifas.
+Monoepaçadas - São derivadas das duas categorias anteriores, por isso existem fontes monoespaçadas com e sem serifas. A principal diferença desse tipo de fonte é o espaço horizontal (largura) ocupado por cada letra.
+Script (Handwriting) - Tentam imitar a escrita humana.
+Display -  São fontes com bastante efeitos visuais, enfeitadas e até mesmo curiosas. Também são chamadas de fontes comemorativas.
+
+— Shorthand: Atalho para formatações importantes.
+A ordem dos atributos de uma shorthand em CSS é importante. No caso da propriedade font é: font-style, font-variant, font-weight, font-size, font-family
+
+— Alinhamento: Existem quatro tipos de alinhamento de textos: 
+text-align: 
+left - à esquerda
+right - à direita
+center - centralizado
+justify - organizado
+
+— Tamanhos/Medidas: Para especificar tamanho de fontes, existem várias medidas como cm (centímetros), in (polegadas), pt (pontos), pc (paicas), px (pixels), etc. 
+Para tamanhos de fonte a serem exibidos na tela, o W3C recomenda o uso do "px" ou do "em". Também pode
+
+Medidas absolutas: cm, mm, in, px, pt, pc
+Medidas relativas: em, ex (relativo à altura do x minúsculo de uma fonte), rem (relativo à altura do m maíusculo de uma fonte), vw (largura da "viewport"), vh (altura da viewport). 
+
+— Existem outras formatações muito usadas em CSS, que são as propriedades font-style para aplicar o itálico ("italic") e font-weight para aplicar o negrito:
+font-style - italic/normal
+font-weight - Pode-se usar o peso número de 100-900 ou nomes como lighter, normal, bold, bolder
+
+— Descobrir fonte usada em outro site: Baixar a extensão para o Google Chrome, Fonts Ninja.
+ 
+— Fontes externas: 
+Sem baixar - https://fonts.google.com 
+Baixar - https://www.dafont.com/
+
+— Fontes em imagens: para indentificar fontes em imagens há algumas plataformas úteis, como:
+https://www.whatfontis.com
+https://www.fontsquirrel.com/
+https://www.myfonts.com/pages/whatthefont
+
+— Seletores: Ao criar nosso conteúdo em HTML, podemos identificar um determinado elemento único com um id, ou agrupar elementos múltiplos que tenham características semelhantes com um class. 
+HTML = id / CSS = # - Temos uma grande limitação: Dentro de um documento HTML, só se pode ter um elemento com o "id" e o seu respectivo nome.
+HTML = class / CSS = . - Podemos ter várias unidades de elementos com uma mesma classe (nome/texto).
+
+— No HTML temos a tag <span><span>, que não tem uma função específica. Serve para agrupar elementos para fins de estilo (usando os atributos "class" ou "id"), ou para compartilhar valores de atributos como lang. 
+<span> é muito parecido com o elemento <div> , entretando <div> é um elemento de nível de bloco enquanto <span> é um elemento em linha.
+
+— Pseudo-classes: Precisam e são relativas a um elemento ou uma classe, elas são relacionadas ao ESTADO de um determinado elemento. São representadas por "dois pontos" ( : ).
+
+— Outros exemplos de ESTADOS de elementos (Pseudo-classes) são: Visited e Active
+A pseudo-class "visited" é bastante usada em âncoras/links, ela serve para ativar uma configuração de estilo quando uma unidade de elemento for visitada. 
+Já a pseudo-class "active" é um estado de elemento que serve para ativar uma configuração de estilo quando uma unidade de elemento for ATIVADA, ou seja, quando clicamos nela.
+
+— Pseudo-elementos: Podem agir nas classes, nos elementos, nos id's e etc... Eles mexem diretamente no CONTEÚDO PERIFÉRICO DO ELEMENTO. No CSS, os pseudo-elementos são representados por "dois pontos" DUPLOS ( :: ).
+Suponha que queremos que no final de todo link tenha uma indicação de que ali é um link, podemos abrir um seletor personalizado para links e usar o pseudo-elemento ( :: ) "after" para fazer isso.
+Exemplo de uso de pseudo-elemento:
+
+a::after {
+            content: ' ⇦';
+            color: darkgray;
+            font-weight: normal;
+        }
+
+O código acima faz com que manipulemos o conteúdo periférico posterior (pseudo-elemento "after") de links. A Propriedade de Estilo "content" detém o valor que foi determinado para aparecer logo em seguida de todo link que inserirmos no site (no caso, seta para esquerda). 
+Além disso, as outras propriedades de estilo do exemplo configuram o estilo de cor e peso desse conteúdo periférico posterior.
+Também existe o pseudo-elemento "before", que funciona como o "after" mas de forma oposta, fazendo com que manipulemos o conteúdo periférico que antecede os elementos.
+
+Nota: Também conseguimos configurar pseudo-elementos e mexer em conteúdos periféricos quando usamos classes ("class"). Exemplo:
+
+.especial::before {
+            content: '⇨ ';
+            color: darkgray;
+            font-weight: normal;
+        }
+
+.especial::after {
+            content: ' ⇦';
+            color: darkgrey;
+            font-weight: normal;
+        }
+
+O código no exemplo acima utiliza pseudo-elementos para manipular conteúdo periférico de links que pertencem à classe ("class") "especial".
+
+Observação: O sinal de maior ( > ) representa no CSS o "children", que seria o filho (quando temos elementos dentro de elementos).
+
+—  Box Model: Os conceitos do Modelo de Caixas são aplicáveis ao HTML e ao CSS. Se trata de conjuntos que irão facilitar muito na hora de organizarmos o design e as partes do nosso site.
+Quando temos um documento HTML, tudo aquilo que é exibido na tela, é exibido em forma de caixa... De tal modo que a grande maioria das caixas na HTML podem estar uma dentro da outra. Dessa forma, podemos formar hierarquias de caixas.
+Quando colocamos um elemento dentro do outro, o termo que descreve isso é o "ANINHAMENTO", algo em forma de ninho, coisas que estão uma dentro da outra. Na prática, uma caixa seria todo elemento de um site que está visível na tela.
+Considerando que todos os elementos de um site estão dentro de uma caixa, quando formatamos um elemento com o CSS através de seletores, na verdade estamos configurando a caixa que vai estar exibindo esse elemento.
+
+— Anatomia das Caixas:
+PARTE DE CONTEÚDO: Toda caixa possui um tamanho, que é chamado de "PARTE DE CONTEÚDO", esse tamanho é especificado em duas medidas muito importantes, que são: Altura ("height") e Largura ("width").
+BORDA: Podemos traçar uma linha em volta da Parte de Conteúdo (que define o tamanho da caixa) e chamamos essa linha de "BORDA". 
+PADDING: Por padrão, a linha da Borda irá ficar muito próxima da Parte de Conteúdo, e se quisermos dar um distanciamento, devemos adicionar um espaço de "PADDING" (acolchoamento), que seria uma pequena lacuna entre a Parte de Conteúdo e a Borda, mantendo a nossa borda distante do conteúdo. 
+MARGIN: Ao desenvolver um site, eventualmente iremos ter caixas uma embaixo da outra de forma seguida e, se uma dessas caixas estiver configurada com um espaçamento "padding", pode ser que elas fiquem muito próximas uma da outra e acabem "grudando" na borda do elemento de cima. Pensando nisso, podemos criar, além de um espaço interno ("padding"), um espaçamento EXTERNO logo após a borda, que seria um "MARGIN".
+OUTLINE/TRACEJADO: Outra coisa que podemos fazer dentro do margin (espaçamento externo), logo do lado de fora da borda, é criar um tracejado, que não seria uma segunda borda e sim uma área chamada de "OUTLINE" (contorno/traçado). 
+
+Sendo assim, ainda referente à anatomia das caixas, todo elemento e consequentemente toda caixa tem a "Parte de Conteúdo", tem uma "Borda", dessa borda para dentro temos o "Padding", da borda para fora temos o "Margin" e, ainda dentro do margin e fora da borda, temos a área do "Outline".
+
+Nota: Todas essas características anatômicas das caixas (tirando a Parte de Conteúdo) geralmente só irão se manifestar se forem previamente configuradas no seu código.
+
+— Tipos de Caixa: Basicamente, existem dois tipos de caixas, as do tipo "box-level / block-level" e "inline-level".
+box-level / block-level: O dito elemento sempre irá se iniciar em uma nova linha e como padrão sempre ocupará a largura total da tela ou do elemento onde ele está contido (100% do "viewport") e ao fim, pula mais uma linha, antes de começar o novo conteúdo.
+Exemplos de tags do tipo "box-level / block-level": <div>, <h1>-<h6>, <p>, <main>, <header>, <nav>, <article>, <aside>, <footer>, <form>, <video>
+inline-level: Já uma caixa do tipo "inline-level" não vai começar em uma nova linha, e sim no ponto exato onde foram definidos, no meio de um parágrafo por exemplo. E a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo, continuando o conteúdo de forma direta na mesma linha.
+Exemplos de tags do tipo "inline-level": <span>, <a>, <code>, <small>, <strong>, <em>, <sup>-<sub>, <label>, <button>, <input>, <select>
+
+— Propriedades de estilo de cada parte anatômica de uma caixa:
+Propriedades-Margin: "margin-top", "margin-right", "margin-bottom", "margin-left"
+Propriedades-Padding: "padding-top", "padding-right", "padding-bottom", "padding-left"
+
+Nas Propriedades de "margin" e "padding" existe um sentido/direção ou ordem correta para inserir as propriedades. A "direção" correta é: 
+1) Top (cima)
+2) Right (direita)
+3) Bottom (baixo)
+4) Left (esquerda)
+
+É importante declarar nessa ordem, pois é necessário ser condizente com a direção e sentido padrão do Modelo de Caixas do DevTools , que segue a direção de um ponteiro de relógio.
+Nota: Para centralizar um elemento (CAIXA) na tela, de forma automática , devemos usar a Propriedade de Estilo "margin" com o valor "auto". Isso fará com que elementos (caixas) sejam centralizados horizontalmente de forma automática, mesmo que o tamanho da tela mude.
+
+Também podemos utilizar uma shorthand: margin: 15px 10px 10px 15px;
+OBSERVAÇÃO: Mesmo em shorthands como a do exemplo acima, os valores devem ser declarados na ordem orientada (top, right, bottom e left), para que consigamos nos nortear e especificar corretamente o espaçamento certo o para respectivo lado/sentido.
+Se quisermos configurar os quatro lados do margin de uma só vez e constituir um margin igualitário (mesmo valor nos quatro lados), podemos simplesmente inserir uma única vez a Propriedade "margin" com o valor em "px" desejado, esse valor será inserido nos quatro lados do elemento automaticamente, exemplo: margin: 10px;
+IMPORTANTE: Se quisermos centralizar um elemento (CAIXA) de forma automática, mas ainda assim alterar o margin do sentido de cima (top) ou de baixo (bottom), devemos inserir a seguinte declaração shorthand: margin: 10px auto 10px auto; 
+Também podemos colocar só dois valores em uma propriedade margin, exemplo: "margin: 10px 20px;". Quando colocamos somente dois valores, significa que os sentidos de CIMA e de BAIXO são representados pelo primeiro valor e os sentidos da DIREITA e da ESQUERDA são representados pelo segundo valor.
+
+Propriedades-Outline: "outline-width" (espessura da outline), "outline-style" (estilo da outline) e "outline-color" (cor da outline).
+Os valores mais utilizados para a Propriedade de Estilo que define o estilo de uma outline (outline-style), são: "solid" (linha sólida), "dashed" (outline tracejada), "dotted" (outline pontilhada), "double" (linha dupla) e o "groove" (outline "3d").
+Sendo que podemos utilizar uma shorthand: outline: 10px solid black; (Siga a ordem de inserção de valores do exemplo na hora de usar uma shorthand, caso contrário não funcionará corretamente).
+
+— "User Agent" no DevTools significa Navegador, o próprio usuário.
+
+— Tags Semânticas: <header>, <nav>, <main>  (<section>, <article>(<aside>), <footer>
+  
+— Box-shadow: A propriedade anexa uma ou mais sombras a um elemento.
+Ex: inset 1px 1px 1px 1px black
+ 
+Primeira configuração: Deslocamento horizontal
+Segunda configuração: Deslocamento vertical
+Terceira configuração: Blur (Desfoque)
+Quarta configuração: Spread (O raio de propagação)
+Quinta configuração: Cor
+Inset: Altera a sombra de uma sombra externa (início) para uma sombra interna
+
+— Border-radius: Caixas com vértices arredondados. Evite exageros!
+
+— VARIÁVEIS EM CSS:
+
+É possível utilizar variáveis dentro do CSS. Isso não torna a linguagem CSS uma linguagem de programação... Ela ainda continua sendo uma linguagem de marcação, assim como o HTML. Toda linguagem de programação tem variáveis, mas nem toda linguagem que tem variável é uma linguagem de programação.
+
+As Variáveis GUARDAM VALORES para serem usados mais na frente no nosso projeto/programa. 
+
+Por que deveríamos usar variáveis em CSS? Porque isso facilita, e muito, o nosso processo de desenvolvimento e posteriormente a manutenção do projeto , caso desejemos alterar algo no futuro... Fora que tudo fica ainda mais organizado.
+
+Usando a Paleta de Cores de um projeto qualquer como exemplo, geralmente alguns desenvolvedores simplesmente fixam a Paleta de Cores (códigos das cores) de um site em um comentário no documento CSS, e copiam e colam esses códigos sempre que precisam alterar uma cor... Na realidade esse não é o modo mais adequado de se fazer isso e existe uma maneira muito melhor e prática de se obter um melhor resultado, com variáveis CSS.
+
+Para declarar variáveis em CSS, devemos criar uma Pseudo-classe especial dentro do documento CSS atual, que seria uma espécie de referência dentro desse documento.
+
+As variáveis CSS são definidas dentro da Pseudo-classe " root " ( :root {...} ). Essa pseudo-classe define as configurações para a " RAIZ DA ÁRVORE ", que vai servir para o documento inteiro . 
+
+Tudo que colocarmos e definirmos dentro dessa pseudo-classe será válido para todo o documento, já que essa pseudoclasse (root) tem uma especificidade muito alta, ou seja, aplicado ao HTML, :root representa o elemento <html> e é idêntico ao seletor html, abrangendo todo o projeto... Dessa forma, basicamente podemos criar Variáveis "Globais" dentro de root.
+
+Observação: Por exemplo, em linguagens de programação, normalmente temos uma "área principal", que é onde podemos declarar as nossas variáveis globais... No CSS, essa "área principal" é na Pseudo-classe root.
+
+Todas as Variáveis em CSS tem que começar com " dois traços " ( -- ), após isso é preciso dar um nome (de sua preferência) para essa variável, posteriormente inserindo o valor da variável (código da cor nesse caso). Exemplo:
+
+:root {
+    --cor0: #ebe5c5;
+    --cor1: #83e1ab;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+}
+
+Nota: Não cadastramos as cores branco e preto nas variáveis do exemplo, mas isso é opcional e se você quiser pode cadastrar... Já que branco e preto sempre vai estar em um site, independentemente da Paleta utilizada.
+
+IMPORTANTE: Referente ao nome que damos para as nossas variáveis, ele é de sua preferência e você pode nomear como no exemplo acima, mas você também pode nomear de acordo com a função da variável. Por exemplo, no caso das cores da nossa Paleta, podemos nomear cada cor (variável) com o seu respectivo encargo, exemplo: "cor-de-destaque", "cor-de-fundo" e etc.
+
+Recapitulando... Para declararmos variáveis CSS, devemos abrir um seletor para a pseudo-classe "root" (referência e raiz da árvore) no início do código CSS (logo após os códigos de regra) e posteriormente declarar as nossas variáveis ( -- ) dentro desse seletor. 
+
+Depois de declarar as suas variáveis "globais" de cor dentro do root, na hora de formatarmos um elemento , qualquer elemento que seja, ao invés de digitar ou copiar e colar um código de cor, simplesmente usamos o atalho "Ctrl + Espaço", avançamos até o fim da lista de sugestões e lá estará a nossa Paleta de Cores declarada no root (valores guardados por variáveis)... Posteriormente basta escolher a cor desejada e adicioná-la.
+
+Ao selecionar variáveis na lista de sugestões como valor da respectiva Propriedade, o VSC coloca a função "var(--ex-nome);" como o valor (também é possível digitar a especificação da variável ao invés de usar a lista).
+
+O legal das variáveis é que podemos pode usá-las em quaisquer elementos e depois, se um cliente pedir por exemplo, facilmente trocar o tema do site inteiro só mudando o valor que está configurado na variável (dentro de root)... É tipo um CSS dentro do CSS, trocando o valor da variável global que está no :root, você troca no site inteiro ... Tudo que foi configurado com essa cor/variável irá ser automaticamente adaptado , sem precisar modificar propriedade por propriedade, item por item...
+
+Lembrando que nos exemplos anteriores, usamos variáveis contendo valores de cores, mas ainda dentro do mesmo seletor root que abrimos, podemos também declarar variáveis de fontes de texto, tanto fontes padrão, externas ou locais... E tudo irá funcionar exatamente como as variáveis de cores. Exemplo:
+
+:root {
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android: 'Android', sans-serif;
+}
+---> 'Bebas Neue' e 'Android' são fontes externas e locais respectivamente, que foram configuradas como valor de variáveis.
+
+Observação: Ao iniciarmos a configuração CSS de um novo projeto, por uma questão de organização, é muito indicado que você vá abrindo os seletores de estilização CSS de acordo com a ordem das tags da estrutura HTML , assim os seletores CSS ficarão organizados ao invés de aglomerados e completamente desordenados, e na hora de fazer alguma alteração pontual você irá se nortear de forma muito mais fácil pelo código CSS.
+— 
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devide-width, initial-scale="1.0">
+	<title>Meu titulo</title>
+</head>
+<body>
+	<h1>TITULO</h1>
+	<p>Meu paragrafo</p>
+</body> 
+</html>
+
+exercicio index ex007 -> pode ser colocado no 008
+e exercicio 008 pode ser colocado no 009
