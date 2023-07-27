@@ -505,8 +505,54 @@ Lembrando que nos exemplos anteriores, usamos variáveis contendo valores de cor
 ---> 'Bebas Neue' e 'Android' são fontes externas e locais respectivamente, que foram configuradas como valor de variáveis.
 
 Observação: Ao iniciarmos a configuração CSS de um novo projeto, por uma questão de organização, é muito indicado que você vá abrindo os seletores de estilização CSS de acordo com a ordem das tags da estrutura HTML , assim os seletores CSS ficarão organizados ao invés de aglomerados e completamente desordenados, e na hora de fazer alguma alteração pontual você irá se nortear de forma muito mais fácil pelo código CSS.
-— 
 
+— Personalização de fundos: A imagem se repetirá automaticamente, em seu tamanho padrão.
+
+Definindo um tamanho para imagem:
+
+	background-size: 100px 100px;
+
+Repetição de imagem: (a partir do canto superior esquerdo)
+
+	background-repeat:     no-repeat;       -> sem repetição (apenas 1 imagem)
+				                repeat-x;	         -> repetição na horizontal
+				                repeat-y	         -> repetição na vertical
+
+— Posição da imagem:
+
+	background-position:     posição horizontal     posição vertical	
+
+ Ex:	    background-position: left top       -> esquerda topo
+	    Background-position: left center;	-> esquerda centro
+            background-position: right bottom;	-> direita embaixo
+            background-position: center center;	-> centro centro
+
+ Obs:	vh	->	altura da view port (height)
+	vw	->	largura da view port (width)
+
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
 
 
 
@@ -526,5 +572,3 @@ Observação: Ao iniciarmos a configuração CSS de um novo projeto, por uma que
 </body> 
 </html>
 
-exercicio index ex007 -> pode ser colocado no 008
-e exercicio 008 pode ser colocado no 009
