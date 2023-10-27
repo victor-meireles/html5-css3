@@ -539,11 +539,153 @@ background-size: auto;		-> Esse é o valor padrão. Ele faz justamente a imagem 
 
 Observação: Quando usamos imagens de fundo, é natural pensarmos que não é necessário configurar uma cor de fundo... Entretanto, é sim recomendável que você configure uma cor de fundo, mesmo que posteriormente aplique uma imagem de fundo por cima dessa cor. 
 
-— 
-— 
-— 
-— 
-— 
+— background-attachment: scroll;	-> padrão; o fundo rola junto com o conteúdo
+			 fixed;		-> fundo fixo à tela, a medida que o conteúdo rola
+                                     (ótimo combinado com background-size: cover;)
+
+Shorthand - background:
+
+ 	Sequência:	color > image > position > / > size > repeat > attachment
+
+ Ex:	background: black url('imagens/wallpaper002.jpg') center top / cover no-repeat fixed;
+
+A barra (/) é usada para separar as propriedades de posicionamento (position) e tamanho (size) da imagem de fundo na ordem shorthand da propriedade background no CSS. Isso ajuda a evitar confusão entre as propriedades de tamanho e posicionamento da imagem de fundo. 
+
+— Centralização vertical de caixas:
+
+Aprendemos que existem elementos que podem conter outros elementos. As <div> são um exemplo de elemento contêiner. 
+
+O significado de contêiner (versão do Inglês container) é simples e direto: " aquele que contém coisas ". Quando você vai centralizar verticalmente uma caixa, é necessário ter a presença de um Container e de um Conteúdo.
+
+Quando queremos centralizar blocos horizontalmente, aprendemos a usar o margin: auto; nas folhas de estilo. Mas como fazer a centralização vertical?
+
+Considerando que temos um elemento dentro do outro e queremos centralizar verticalmente o elemento interno, devemos:
+
+Atribuir uma classificação (id ou class) para ambos os elementos, pai e filho...
+
+Posteriormente configurar o elemento pai com um "position: relative" e logo após configurar o elemento filho com um "position: absolute".
+
+No elemento filho, configurar ambas as Propriedades Auxiliares do position usadas nesse caso, left e top, com um valor de 50% - Feito isso, a nossa caixa interna será centralizada verticalmente. 
+
+É IMPORTANTE DESTACAR: Com essa configuração, o elemento interno realmente será alinhado pelo centro, mas tendo como referência o CANTO SUPERIOR ESQUERDO DA CAIXA FILHO... resultando especificamente no alinhamento desse ponto (canto superior esquerdo da box) e não da caixa como um todo.
+
+Para resolver isso, devemos mudar a posição do "ponto de alinhamento" da caixa filho para o CENTRO da box. Sendo que por padrão, como já vimos, esse ponto é no canto superior esquerdo. 
+
+Para transformar o "ponto de alinhamento" de uma caixa (mover a caixa), usamos a Propriedade de Estilo " transform ".
+
+Utilizando a propriedade transform é possível manipular visualmente um elemento (mover, rotacionar, dimensionar e etc). 
+
+As funções mais usadas para o transform são: rotate, scale, skew e translate. Para centralizar o "ponto de alinhamento" na nossa box, iremos usar a função "translate".
+
+translate: A função de translate serve para mover o elemento para os lados ou para cima/baixo. Mudar o seu "ponto de alinhamento"... A sintaxe pode ser especifica para um dos eixos x/y ( translateX ou translateY ), como pode ser apenas translate, abrangendo os dois eixos ( x, y ). Obs.: Para ir para o lado esquerdo ou para cima, use valores negativos.
+
+rotate: Como o nome já sugere, é utilizada para rotacionar o elemento, de 0 a 360 graus. Utilizando valores positivos, a rotação será realizada no sentido horário e, utilizando valores negativos, no sentido Anti-horário.
+
+scale: Utilizado para redimensionar os elementos, tendo como escala padrão o valor "1". Valores maiores que 1, aumentarão o tamanho do elemento, e valores menores que 1 diminuirão sua escala.
+
+skew: É utilizado para "distorcer" os elementos, alterando os ângulos.
+
+Nota: A propriedade de estilo "transform" e suas funções é muito utilizada juntamente com a pseudo-classe "hover" e com a propriedade de estilo "transition" para criar efeitos visuais.
+
+Entendido o conceito do transform e suas funções, usaremos a seguinte declaração para mudar/centralizar o "ponto de alinhamento" da nossa box filho: 
+
+transform: translate(-50%, -50%);
+
+Como queremos posicionamento centralizado, na função "translate" inserimos valores negativos de "-50% -50%" para deslocar o "ponto de alinhamento" da nossa caixa filho (metade do container... centro). O PRIMEIRO VALOR representa o deslocamento horizontal do ponto, e o SEGUNDO VALOR representa o deslocamento vertical desse ponto. 
+
+Utilizamos valores em % para ajustar o ponto de referência exatamente no meio da box (-50% -50%), mas dependendo do que você quer fazer, também pode usar valores em px ou outra unidade de medida.
+
+Lembrando que aquilo que de fato está centralizando a caixa são os Positions e suas Propriedades Auxiliares (left e top), a propriedade transform apenas mudou o ponto de referência da caixa filho.
+
+Segue abaixo um exemplo do código completo, tanto da box pai quanto da box filho: 
+
+        section#container {
+
+            position: relative;
+            height: 100vh;
+            
+            background-color: purple;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+        }
+        article#conteudo {
+
+            min-height: 200px;
+            width: 400px;
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            background-color: yellow;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+            transform: translate(-50%, -50%);
+        }
+
+Essa é apenas uma das técnicas de centralização de conteúdo, existem outras que requerem aprender conceitos mais aprofundados das folhas de estilo, como as caixas flexíveis (Flexbox).
+
+— Às vezes o TEXTO do nosso site fica adequado para telas maiores (desktop) mas quando abrimos a página em uma tela menor (celular), começa a ficar grande demais para ler... Então quando surgir esse tipo de problema, temos que tentar adaptar o texto do site pensando nessa questão.
+
+No desafio "Cordel Moderno" usamos um recurso que faz com que o TEXTO do site aumente ou diminua de acordo com o tamanho (tamanho da largura) da janela do navegador.
+
+Para fazer isso, a dica é usar as unidades de medidas relativas das CSS, como o vh e vw. Basicamente, vh significa "viewport height" e vw significa "viewport width". 
+
+Como nós já sabemos, de forma resumida a viewport é a área visível de uma janela. As unidades de medida vh e vw usam justamente o tamanho da viewport como referência para definir o tamanho das fontes de texto.
+
+Dessa forma, podemos configurar o nosso texto de uma maneira que ele aumente ou diminua dinamicamente, adaptando o tamanho desse texto para diferentes tamanhos de tela.  
+
+Sendo assim, se você quer formatar o seu texto dessa forma, ao invés de configurá-lo com unidades de medida absolutas (como px ou em), configure o tamanho do texto (font-size) com a unidade de medida "vw". 
+
+Exemplo:
+
+Para o título principal: font-size: 10vw;
+
+Paro o corpo da página: font-size: 3.5vw;
+
+Na primeira opção o tamanho da fonte vai ser referente a 10% da largura da viewport. Já na segunda opção, será referente a 3.5% da largura dessa viewport.
+
+Dessa forma, quando a tela for grande, ele coloca a letra grande... Quando a tela é menor, ele coloca a letra menor, alterando a o tamanho da fonte dinamicamente baseado na largura da tela. 
+
+Observação: Essa técnica das medidas vh e vw para adaptar o texto não é o melhor recurso para fazer esse tipo de adaptação dinâmica. Pode até funcionar, mas não gera um resultado 100% perfeito. O ideal para fazer esse tipo de adaptação seria usar Media Queries, um conceito que veremos mais pra frente.
+
+— VOCÊ NÃO PODE USAR TABELA PRA CRIAR A ESTRUTURA DO SITE! 
+Todas as tabelas seguem a seguinte hierarquia:
+TABLE = tabela
+	TABLE ROWS = linha de tabela
+		TABLE READER = cabeçalho de tabela
+		TABLE DATA = dado de tabela
+
+Se a hierarquia não for respeitada, os dados serão exibidos antes ou depois da tabela.
+
+"Border-collapse" vem como padrão "separate". Ao usar a declaração "collapse" fica mais próximo ao que é uma tabela.
+
+— Dentro de uma célula de tabela (dado de tabela), é possível alterar o alinhamento do texto dessa célula. Tanto o Alinhamento Horizontal (coluna esquerda, central e direita) quanto o Alinhamento Vertical (linha do topo, centro e base).
+
+Para fazer o alinhamento horizontal: Devemos abrir um seletor para o elemento "td" e usar a Propriedade de Estilo "text-align", onde podemos alinhar os textos atribuindo os valores "left", "center" ou "right".
+
+Para fazer o alinhamento vertical: Devemos abrir um seletor para o elemento "td" e usar a Propriedade de Estilo "vertical-align", onde podemos alinhar os textos atribuindo os valores "top", "middle" e "bottom".
+
+Observação: Você pode configurar uma identificação (id ou class) para uma célula específica (td) que você queira mudar o alinhamento do texto, dessa forma isso acontecerá de forma isolada, alinhando o texto só daquela célula que você identificou.
+
+Alinhamento horizontal:
+
+	      text-align: 	left;		(padrão)
+			                center;
+			                right;
+
+Alinhamento vertical:	
+
+	vertical-align:	top;
+			                middle;	(padrão)
+			                bottom;
+
+
+Para números à direita (padrão do Excel):
+
+	- Criar uma classe e alinhar os "td" dessa classe à direita (right).
+
 — 
 — 
 — 
