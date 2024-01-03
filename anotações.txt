@@ -650,7 +650,7 @@ Dessa forma, quando a tela for grande, ele coloca a letra grande... Quando a tel
 
 Observação: Essa técnica das medidas vh e vw para adaptar o texto não é o melhor recurso para fazer esse tipo de adaptação dinâmica. Pode até funcionar, mas não gera um resultado 100% perfeito. O ideal para fazer esse tipo de adaptação seria usar Media Queries, um conceito que veremos mais pra frente.
 
-— VOCÊ NÃO PODE USAR TABELA PRA CRIAR A ESTRUTURA DO SITE! 
+— Tabelas: VOCÊ NÃO PODE USAR TABELA PRA CRIAR A ESTRUTURA DO SITE! 
 Todas as tabelas seguem a seguinte hierarquia:
 TABLE = tabela
 	TABLE ROWS = linha de tabela
@@ -686,11 +686,103 @@ Para números à direita (padrão do Excel):
 
 	- Criar uma classe e alinhar os "td" dessa classe à direita (right).
 
-— 
-— 
-— 
-— 
-— 
+ANATOMIA PARA TABELAS GRANDES:
+        TABLE
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+
+— Escopo de títulos em tabelas:
+
+	   - Sem efeitos visuais, apenas semânticos;
+
+Se o título da sua célula for para uma COLUNA, use como definição do parâmetro "scope" o VALOR "col".
+
+
+	<th scope="col">    </th>	
+
+Se o título da sua célula for para uma LINHA, use como definição do parâmetro "scope" o VALOR "row".
+
+	<th scope="row">    </th>
+
+ Ex:     <th scope="col">Estado</th>
+	      <th scope="row">Total de Habitantes</th>
+
+— Quando temos uma tabela com muitos dados, com muitas colunas e principalmente com muitas linhas, conforme vamos descendo é natural que o cabeçalho fique para cima e "suma", e é nessa hora que algumas vezes acabamos nos perdendo na leitura da tabela, visto que esquecemos aquilo que determinadas colunas querem dizer 
+
+Um cabeçalho fixo pode solucionar esse problema, visto que conforme vamos scrollando a tabela, o cabeçalho se mantem fixo no topo, mantendo os títulos das colunas sempre visíveis. 
+
+Para fazer isso, devemos abrir um seletor para a área da cabeça da nossa tabela (thead), que é onde estão as células de título que constituem o nosso cabeçalho... E dentro desse seletor, declarar a propriedade " position " com o valor " sticky ". Após isso é necessário usar uma propriedade auxiliar do position, o " top "... E como não queremos mudar de lugar o nosso cabeçalho e sim apenas ativar o "sticky", você deve inserir nessa propriedade auxiliar o valor " -1px ", colando o cabeçalho na posição "zero".
+
+Exemplo do código:
+
+thead {
+    position: sticky;
+    top: -1px;
+}
+
+Um ponto positivo é que se em baixo da sua tabela você tiver mais conteúdo, conforme você vai scrollando, o cabeçalho que está fixo na tabela se limita fixo apenas dentro dessa tabela, ele não ficará por cima do resto do seu conteúdo.
+
+Observação: Essa técnica do cabeçalho fixo não está funcionando perfeitamente em todos os navegadores, então use esse recurso com moderação. 
+
+— Mesclando Células:
+
+Expansão em forma de coluna:	<td colspan=" ">        </td>
+
+  Ex: <td colspan="2">B</td>	  -> expandindo B para 2 colunas.
+
+Expansão em forma de linha:	<td rowspan=" ">        </td>
+
+  Ex: <td rowspan="3">D</td>	  -> expandindo D para 3 linhas.
+
+— Agrupando Colunas:
+
+Na parte de HTML:
+
+   Ex:	<table>
+        		<colgroup>
+            		        <col class="nome">
+            		        <col class="sexo">
+            		        <col class="idade">
+            		        <col class="prof">
+        		</ colgroup>
+
+Na parte de CSS:
+
+   Ex:		col.nome {
+            		        background-color: yellow;
+       	 	        }
+		col.sexo {
+			        background-color: green;
+       	 	        }
+
+Para grupo de colunas:
+
+   Ex:	HTML:	<colgroup>
+            		        <col class="nome">
+            		        <col class="grupo" span="2">	(2 colunas serão formatadas)
+            		        <col class="prof">
+       		</ colgroup>
+
+	CSS:	col.grupo {
+            		        background-color: red;
+		                }
+
+— Tornando tabelas mais responsivas:
+
+Selecionar toda a tabela <table>;
+
+Envelopar dentro de uma <div id="container">;
+
+Em <style>, formatar a 'div#container' com 'overflow-x: auto;'  (apenas para rolagem da tabelta no eixo-x)
+
+   Ex:	div#container {
+	               overflow-x: auto;	   (conteúdo base fica travado, enquanto rola a tabela lateralmente)
+	        }
 — 
 — 
 — 
