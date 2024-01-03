@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td , th {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        td.estados > a:hover {
+            text-decoration: underline ;
+            display: inline;
+            color: purple;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
+        thead, tfoot {
+            background-color: rgb(92, 91, 91);
+            color: white;
+        }
+        
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(92, 91, 91);
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        td.num {
+            text-align: right;
+        }
+
+        /* O seletor :nth-child(n) corresponde a cada elemento que é o enésimo filho de seu pai. */
+        /* td:nth-child(2n) {
+            text-align: right;
+        }
+        */
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES:
+        TABLE
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            FTFOOT
+                TR, TD, TH
+    -->
+    <table>
+        <caption>Lista de unidades federativas do Brasil por população (Censo 2022)</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_(estado)" target="_self" rel="next">São Paulo</a></td>
+                <td class="num">44.420.459</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Minas_Gerais" target="_self" rel="next">Minas Gerais</a></td>
+                <td class="num">2.538.718</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro_(estado)" target="_self" rel="next">Rio de Janeiro</a></td>
+                <td class="num">16.054.524</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Bahia" target="_self" rel="next">Bahia</a></td>
+                <td class="num">14.136.417</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_self" rel="next">Paraná</a></td>
+                <td class="num">11.443.208</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Sul" target="_self" rel="next">Rio Grande do Sul</a></td>
+                <td class="num">10.880.506</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Pernambuco" target="_self" rel="next">Pernambuco</a></td>
+                <td class="num">9.058.155</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Cear%C3%A1" target="_self" rel="next">Ceará</a></td>
+                <td class="num">8.791.688</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Par%C3%A1" target="_self" rel="next">Pará</a></td>
+                <td class="num">8.116.132</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Santa_Catarina" target="_self" rel="next">Santa Catarina</a></td>
+                <td class="num">7.609.601</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Goi%C3%A1s" target="_self" rel="next">Goiás</a></td>
+                <td class="num">7.055.228</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_self" rel="next">Maranhão</a></td>
+                <td class="num">6.775.152</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Para%C3%ADba" target="_self" rel="next">Paraíba</a></td>
+                <td class="num">3.974.495</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Amazonas" target="_self" rel="next">Amazonas</a></td>
+                <td class="num">2.941.175</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Esp%C3%ADrito_Santo_(estado)" target="_self" rel="next">Espírito Santo</a></td>
+                <td class="num">3.833.486</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Mato_Grosso" target="_self" rel="next">Mato Grosso</a></td>
+                <td class="num">3.658.813</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Norte" target="_self" rel="next">Rio Grande do Norte</a></td>
+                <td class="num">3.302.406</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Piau%C3%AD" target="_self" rel="next">Piauí</a></td>
+                <td class="num">3.269.200</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Alagoas" target="_self" rel="next">Alagoas</a></td>
+                <td class="num">3.127.511</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Distrito_Federal_(Brasil)" target="_self" rel="next">Distrito Federal</a></td>
+                <td class="num">2.817.068</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Mato_Grosso_do_Sul" target="_self" rel="next">Mato Grosso do Sul</a></td>
+                <td class="num">2.756.700</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Sergipe" target="_self" rel="next">Sergipe</a></td>
+                <td class="num">2.209.558</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Rond%C3%B4nia" target="_self" rel="next">Rondônia</a></td>
+                <td class="num">1.581.016</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Tocantins" target="_self" rel="next">Tocantins</a></td>
+                <td class="num">1.511.459</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Acre" target="_self" rel="next">Acre</a></td>
+                <td class="num">830.026</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Amap%C3%A1" target="_self" rel="next">Amapá</a></td>
+                <td class="num">733.508</td>
+            </tr>
+            <tr>
+                <td class="estados"><a href="https://pt.wikipedia.org/wiki/Roraima" target="_self" rel="next">Roraima</a></td>
+                <td class="num">636.303</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">População Total</th>
+                <td class="num"><strong>203.062.512</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
